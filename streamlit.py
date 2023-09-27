@@ -8,7 +8,7 @@ def process_main_page():
     process_inputs()
 
 def show_main_page():
-    image = Image.open('data/scoring.jpg')
+    image = Image.open('data/photo.jpg')
 
     st.set_page_config(
         layout="wide",
