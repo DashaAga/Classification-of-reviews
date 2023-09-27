@@ -26,10 +26,10 @@ def show_main_page():
     st.image(image)
 
 
-def write_prediction(prediction):
+def write_prediction(text):
     st.write("Предсказание")
-    text = load_model_and_predict(prediction)
-    st.write(text)
+    prediction = load_model_and_predict(text)
+    st.write(prediction)
 
 def process_inputs():
     st.write('Оставьте ваш отзыв')
@@ -40,7 +40,6 @@ def process_inputs():
     if st.button("Обработать"):
         # Вызываем функцию для обработки текста
         write_prediction(text)
-    write_prediction(prediction)
 
 
 if __name__ == "__main__":
