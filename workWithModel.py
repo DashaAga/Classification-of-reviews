@@ -1,8 +1,9 @@
 from pickle import load
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
+import numpy as np
 
-def text_to_vector(text, vector_size = 6967):
+def text_to_vector(text, vector_size=3816):
     # Создаем объект TF-IDF векторизатора с заданным размером
     vectorizer = TfidfVectorizer(max_features=vector_size, lowercase=True)
 
@@ -19,9 +20,10 @@ def text_to_vector(text, vector_size = 6967):
 
     return dense_vector
 
+
 def load_model_and_predict(text, path="data/model.pickle"):
     with open(path, "rb") as file:
         model = load(file)
         prediction = model.predict(text_to_vector(text))
-
     return f"Вы бы поставили оценку {prediction}"
+load_model_and_predict("оовыдлвзцвыз")
