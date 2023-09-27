@@ -3,7 +3,7 @@ import pandas as pd
 
 def text_to_vector(text, vector_size = 6967):
     # Создаем объект TF-IDF векторизатора с заданным размером
-    vectorizer = TfidfVectorizer(max_features=vector_size, lowercase=True, stop_words='english')
+    vectorizer = TfidfVectorizer(max_features=vector_size, lowercase=True)
 
     # Преобразуем текст в TF-IDF вектор
     tfidf_vector = vectorizer.fit_transform([text])
