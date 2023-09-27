@@ -33,7 +33,7 @@ def write_prediction(prediction):
 
 def process_inputs():
     st.write('Оставьте ваш отзыв')
-    text = st.sidebar.text_input(value="Ваш отзыв")
+    text = st.text_input(value="Ваш отзыв")
     prediction = load_model_and_predict(text)
     write_prediction(prediction)
 
