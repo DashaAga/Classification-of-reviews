@@ -27,7 +27,8 @@ def show_main_page():
 
 
 def write_prediction(prediction):
-    st.write("## Предсказание")
+    st.write("Предсказание")
+    prediction = load_model_and_predict(prediction)
     st.write(prediction)
 
 def process_text_input(text):
@@ -38,14 +39,12 @@ def process_text_input(text):
 def process_inputs():
     st.write('Оставьте ваш отзыв')
     # Создаем поле для ввода текста
-    user_input = st.text_input("Введите текст:")
+    text = st.text_input("Ваш отзыв:")
 
     # Если пользователь ввел текст и нажал Enter
     if st.button("Обработать"):
         # Вызываем функцию для обработки текста
-        process_text_input(user_input)
-    text = st.text_input(value="Ваш отзыв")
-    prediction = load_model_and_predict(text)
+        write_prediction(text)
     write_prediction(prediction)
 
 
