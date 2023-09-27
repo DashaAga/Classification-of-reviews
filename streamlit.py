@@ -28,8 +28,8 @@ def show_main_page():
 
 def write_prediction(prediction):
     st.write("Предсказание")
-    prediction = load_model_and_predict(prediction)
-    st.write(prediction)
+    text = load_model_and_predict(prediction)
+    st.write(text)
 
 def process_inputs():
     st.write('Оставьте ваш отзыв')
