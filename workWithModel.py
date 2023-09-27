@@ -21,7 +21,6 @@ def text_to_vector(text, vector_size = 6967):
 def load_model_and_predict(text, path="data/model.pickle"):
     with open(path, "rb") as file:
         model = load(file)
-
-    prediction = model.predict(text)
+        prediction = model.predict(text)
 
     return f"Вы бы поставили оценку {prediction}"

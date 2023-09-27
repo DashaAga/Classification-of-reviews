@@ -31,11 +31,6 @@ def write_prediction(prediction):
     prediction = load_model_and_predict(prediction)
     st.write(prediction)
 
-def process_text_input(text):
-    # Выводим текст на экран
-    st.write("Вы ввели следующий текст:")
-    st.write(text)
-
 def process_inputs():
     st.write('Оставьте ваш отзыв')
     # Создаем поле для ввода текста
