@@ -30,9 +30,20 @@ def write_prediction(prediction):
     st.write("## Предсказание")
     st.write(prediction)
 
+def process_text_input(text):
+    # Выводим текст на экран
+    st.write("Вы ввели следующий текст:")
+    st.write(text)
 
 def process_inputs():
     st.write('Оставьте ваш отзыв')
+    # Создаем поле для ввода текста
+    user_input = st.text_input("Введите текст:")
+
+    # Если пользователь ввел текст и нажал Enter
+    if st.button("Обработать"):
+        # Вызываем функцию для обработки текста
+        process_text_input(user_input)
     text = st.text_input(value="Ваш отзыв")
     prediction = load_model_and_predict(text)
     write_prediction(prediction)
