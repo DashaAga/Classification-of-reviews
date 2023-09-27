@@ -27,7 +27,6 @@ def show_main_page():
 
 
 def write_prediction(text):
-    st.write("Предсказание")
     prediction = load_model_and_predict(text)
     st.write(prediction)
 
