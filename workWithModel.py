@@ -1,5 +1,6 @@
 from pickle import load
 import pandas as pd
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 def text_to_vector(text, vector_size = 6967):
     # Создаем объект TF-IDF векторизатора с заданным размером
